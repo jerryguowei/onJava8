@@ -20,6 +20,24 @@ public class GetData {
     	   System.out.print(c + " ");
        System.out.println();       
        bb.asShortBuffer().put((short)471142);
+       System.out.println(bb.getShort());
+       bb.rewind();
+       
+       bb.asIntBuffer().put(99471142);
+       System.out.println(bb.getInt());
+       bb.rewind();
+       bb.asLongBuffer().put(99471142);
+       System.out.println(bb.getLong());
+       bb.rewind();
+       
+       bb.asFloatBuffer().put(99471142.2f);
+       System.out.println(bb.getFloat());
+       bb.rewind();
+       
+       bb.asDoubleBuffer().put(99471142);
+       System.out.println(bb.getDouble());
+       bb.rewind();
+       
        
        
 	}

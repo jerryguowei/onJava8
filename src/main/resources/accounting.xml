@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+<root>
+	<block>
+		<data>Nicolas</data>
+		<data sql="1">SELECT systime FROM dual</data>
+	</block> 
+	<block>
+		<data>Third Party Name</data>
+		<data>Global Trade Id</data>
+		<data>Schedule Id</data>
+	</block>
+	<block></block>
+	<block>
+		<data sql = "1">SELECT
+( SELECT t.general_ledger_name FROM air.t_a_general_ledgers t  WHERE t.account_id = mt.account_id
+                              AND t.general_ledger_id = mt.general_ledger_id) AS "general_ledger_name"
+		</data>
+	</block>
+	<block>
+		<data></data>
+		<data></data>
+		<data>SUM:</data>
+		<data sql="1"></data>
+	</block>
+	<update sql= "1">
+        update  mt.accounting_entry_id FROM  t_d_accounting_entries mt 
+		WHERE [FILTER] AND mt.account_id = 32
+	</update>
+</root>

@@ -1,9 +1,5 @@
 package think.generics;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.net.ssl.ExtendedSSLSession;
 
 public class Wildcards {
    static void rawArgs(Holder holder, Object arg) {
@@ -75,6 +71,14 @@ public class Wildcards {
 	   Long r10 = wildSubtype(qualified, lng);
 	   
 	   Object r11 = wildSubtype(unbouned, lng);
+	   Long r12 = wildSubtype(bounded, lng);
+	   
+	   wildSupertype(raw, lng);
+	   
+	   wildSupertype(qualified, lng);
+	   //wildSupertype(bounded, lng);
+	   
+//	   wildSupertype(unbouned, lng);
 	   
    }
 }

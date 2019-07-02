@@ -19,11 +19,14 @@ public class GenericArray<T> {
 	}
 	public static void main(String[] args) {
 		GenericArray<Integer> gai = new GenericArray<>(10);
-		gai.put(0, 1);
+		gai.put(0, 2);
 		
 //	    Integer[] b = gai.rep();
 		Object[] oa = gai.rep();
-		Integer a = gai.get(2);
+		Integer a = gai.get(0);
+		System.out.println(a);
+		
+		Object[] ab = (Object[]) new Integer[10];
 	}
 	
 }
